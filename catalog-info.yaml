@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: gr8v84hbz-go-gitops
+  description: This is GitOps manifest for gr8v84hbz-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: gr8v84hbz-go
+    janus-idp.io/tekton: gr8v84hbz-go 
+    backstage.io/kubernetes-id: gr8v84hbz-go 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:gr8v84hbz-go
